@@ -1,11 +1,23 @@
+let count = 0
+let running = true
+
 input.onButtonPressed(Button.A, function () {
-    counter += 2 // Aボタンを押したとき、数字が2ずつ増えるように変更
+    // Aボタンでカウントを止める
+    running = false
 })
-/**
- * カウンターを作る
- */
-let counter = 0
-// 0からスタート
-counter += 1
-// 1増やす
-basic.showNumber(counter)
+
+input.onButtonPressed(Button.B, function () {
+    // Bボタンでカウントを0にリセットして表示
+    count = 0
+    basic.showNumber(count)
+})
+
+basic.forever(function () {
+    if (running) {
+        count += 1
+        basic.showNumber(count)
+        basic.pause(1000) // 1秒ごとにカウントアップ
+    } else {
+        basic.pause(100) // 停止中は小休止（CPU負荷軽減）
+    }
+})
