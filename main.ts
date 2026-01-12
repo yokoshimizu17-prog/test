@@ -1,3 +1,7 @@
+input.onButtonPressed(Button.A, function () {
+    // 0からスタート
+    counter += 1
+})
 /**
  * カウンターを作る
  */
