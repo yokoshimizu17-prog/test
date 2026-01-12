@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    counter += 1
+    counter += 2 // Aボタンを押したとき、数字が2ずつ増えるように変更
 })
 /**
  * カウンターを作る
