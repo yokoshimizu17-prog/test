@@ -7,6 +7,6 @@ input.onButtonPressed(Button.A, function () {
  */
 let counter = 0
 // 0からスタート
-counter += 1
+counter += 2
 // 1増やす
 basic.showNumber(counter)
